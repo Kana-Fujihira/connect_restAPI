@@ -1,0 +1,25 @@
+.parentNavbar {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column; 
+}
+
+.childNavbar {
+  display: flex;
+}
+
+.childNavbar > ul {
+  list-style: none;
+  display: flex; 
+  gap: 20px; 
+}
+
+
+@media (min-width: 768px) {
+  .parentNavbar {
+    flex-direction: row; 
+  }
+}

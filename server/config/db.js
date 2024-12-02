@@ -1,10 +1,16 @@
 import { createConnection } from "mysql2";
+import dotenv from "dotenv";
 
-export const db = createConnection({
+dotenv.config();
+
+const db = createConnection({
   host: "localhost",
-  user: "kana",
-  password: "kana",
-  database: "test_data",
+  // eslint-disable-next-line no-undef
+  user: process.env.DB_USER,
+  // eslint-disable-next-line no-undef
+  password: process.env.DB_PASSWORD,
+  // eslint-disable-next-line no-undef
+  database: process.env.DB_NAME,
 });
 
 db.connect((err) => {

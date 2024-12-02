@@ -3,7 +3,7 @@ import { getDB } from "../config/db.js";
 export const getTasks = () => {
   const db = getDB();
   return new Promise((resolve, reject) => {
-    const sql = "SELECT * FROM tasks";
+    const sql = "SELECT id, title, completed FROM tasks"; // optimuize query of mySQL
     db.query(sql, (err, result) => {
       if (err) return reject(err);
       resolve(result);
