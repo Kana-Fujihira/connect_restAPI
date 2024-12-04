@@ -1,0 +1,26 @@
+.containerList {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  list-style-position: inside;
+  border: solid;
+  border-radius: 20px;
+  padding: 5%;
+  margin: 10%;
+}
+
+.newTaskInput {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+label,
+input {
+  font-size: 20px;
+  border-radius: 20px;
+  margin: 3%;
+}

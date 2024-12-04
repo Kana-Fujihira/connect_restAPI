@@ -1,0 +1,24 @@
+.imageContainer {
+  width: 400px;
+  height: 200px;
+  background-color: red;
+}
+
+.imageContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.greenText > p:first-child {
+  color: green;
+}
+
+.textContainer {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+}
