@@ -2,9 +2,9 @@ import { getTasks, addTasks, deleteTasks } from "../models/TaskRepository.js";
 
 export const browse = async (req, res) => {
   try {
-    // Fetch all tasks from the database
+    // Fetch all tasks from the database , getTasks from TaskRepository 
     const tasks = await getTasks();
-    // Respond with the tasks in JSON format
+    // Respond with the tasks in JSON format = key + value 
     res.json(tasks);
   } catch (err) {
     // Pass any errors to the error-handling middleware
@@ -15,8 +15,8 @@ export const browse = async (req, res) => {
 // The A of BREAD - Add (Create) operation
 export const add = async (req, res) => {
   try {
-    const task = req.body;
-    // Create new task
+    const task = req.body; // req.body = HTTP request sent from client 
+    // Create new task, addTasks comes from TaskRepository
     const newTask = await addTasks(task);
 
     res.status(201).json(newTask);

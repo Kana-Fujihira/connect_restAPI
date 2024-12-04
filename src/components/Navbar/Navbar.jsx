@@ -1,6 +1,8 @@
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
+
+
   return (
     <div className={styles.parentNavbar}>
       <h1>Simple To Do List</h1>
